@@ -1,8 +1,8 @@
-"Template - Main"
+"Substrate - Main"
 
 <CONSTANT GAME-BANNER
-"Template|
-A ZILF game template by Alex Proudfoot">
+"Substrate|
+A ZILF game substrate by Alex Proudfoot">
 
 <CONSTANT RELEASEID 1> <VERSION ZIP>
 
@@ -19,12 +19,8 @@ A ZILF game template by Alex Proudfoot">
 
 <INSERT-FILE "parser">
 
-;<INSERT-FILE "Actions">
-;<INSERT-FILE "Activities">
-
-<ROOM DARKNESS (DESC "In the Dark") (IN ROOMS)
-    (LDESC "It's scary. You can't see anything ...")
->
+<INSERT-FILE "Actions">
+<INSERT-FILE "Activities">
 
 
 "The Game"
@@ -32,12 +28,13 @@ A ZILF game template by Alex Proudfoot">
 <ROUTINE SET-THE-SCENE ()
     <SETG HERE DARKNESS>
     <MOVE PLAYER ,HERE>
+    <SETG MAX-SCORE 0>
 >
 
 <ROUTINE INTRODUCE-THE-GAME ()
     <TELL CR CR "This game starts in the dark ..." CR>
 >
 
-;<INSERT-FILE "Characters">
-;<INSERT-FILE "Locations">
-;<INSERT-FILE "Scenes">
+<INSERT-FILE "Characters">
+<INSERT-FILE "Locations">
+<INSERT-FILE "Scenes">
