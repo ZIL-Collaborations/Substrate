@@ -4,9 +4,9 @@
 organise game startup and print an introduction if necessary. The name will be
 changed in accordance with the name of the game."
 
-<CONSTANT GAME-BANNER
-"Game|
-A ZILF game by IF Author">
+<CONSTANT GAME-TITLE "Game">
+<CONSTANT GAME-DESCRIPTION
+"A ZILF game by IF Author">
 
 <CONSTANT RELEASEID 1> <VERSION ZIP>
 
