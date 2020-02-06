@@ -5,8 +5,8 @@
 <BIND ((REDEFINE T))
     <DEFMAC HOOK-END-OF-COMMAND ()
        '<BIND ()
-            <NOTIFY-IF-SCORE-UPDATED>
-            <FINISH-IF-CODE-SET>
+            <NOTIFY-IF-SCORE-UPDATED> ;"see Scoring.zil"
+            <FINISH-IF-CODE-SET>      ;"see Scoring.zil"
         >
     >
 >

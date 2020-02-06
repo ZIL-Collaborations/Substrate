@@ -1,5 +1,9 @@
 "Game - Main"
 
+"This file will load all of the other files and the ZILF Library. It will also
+organise game startup and print an introduction if necessary. The name will be
+changed in accordance with the name of the game."
+
 <CONSTANT GAME-BANNER
 "Game|
 A ZILF game by IF Author">
