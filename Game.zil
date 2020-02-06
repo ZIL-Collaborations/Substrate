@@ -22,7 +22,7 @@ A ZILF game by IF Author">
 >
 
 <INSERT-FILE "parser">
-<INSERT-FILE "Scoring">
+<INSERT-FILE "../Extensions/Scoring">
 <INSERT-FILE "Actions">
 <INSERT-FILE "Activities">
 <INSERT-FILE "Hooks">
