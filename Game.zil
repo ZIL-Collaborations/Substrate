@@ -1,8 +1,8 @@
-"Substrate - Main"
+"Game - Main"
 
 <CONSTANT GAME-BANNER
-"Substrate|
-A ZILF game substrate by Alex Proudfoot">
+"Game|
+A ZILF game by IF Author">
 
 <CONSTANT RELEASEID 1> <VERSION ZIP>
 
@@ -18,9 +18,10 @@ A ZILF game substrate by Alex Proudfoot">
 >
 
 <INSERT-FILE "parser">
-
+<INSERT-FILE "Scoring">
 <INSERT-FILE "Actions">
 <INSERT-FILE "Activities">
+<INSERT-FILE "Hooks">
 
 
 "The Game"
