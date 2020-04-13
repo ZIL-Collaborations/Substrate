@@ -1,8 +1,9 @@
-"Game - Main"
+"G A M E  -  Main File"
 
-"This file will load all of the other files and the ZILF Library. It will also
-organise game startup and print an introduction if necessary. The name will be
-changed in accordance with the name of the game."
+"THE PROJECT"
+
+"Each ZILF game project must have a name, a description, a release number and a
+z-machine version"
 
 <CONSTANT GAME-TITLE "Game">
 <CONSTANT GAME-DESCRIPTION
@@ -11,24 +12,59 @@ changed in accordance with the name of the game."
 <CONSTANT RELEASEID 1> <VERSION ZIP>
 
 
-"The Mechanics"
+"THE MECHANICS"
+
+"Game mechanics are mostly provided by the ZILF Library but can be modified or
+enhanced with custom interaction and behaviour which may also be reused as
+library extensions."
+
+"Startup"
 
 <ROUTINE GO ()
     <SET-THE-SCENE>
     <INTRODUCE-THE-GAME>
-    <CRLF> <V-VERSION>
-    <CRLF> <V-LOOK>
     <MAIN-LOOP>
 >
 
+"Library and Extensions"
+
 <INSERT-FILE "parser">
 <INSERT-FILE "../Extensions/Scoring">
+<INSERT-FILE "../Extensions/Finishing">
+
+"Game Specific Interaction"
+
 <INSERT-FILE "Actions">
+
+"Game Specific Behaviour"
+
 <INSERT-FILE "Activities">
-<INSERT-FILE "Hooks">
+
+"Extra Game Verbs"
+
+<SETG EXTRA-GAME-VERBS '(NOTIFY-OFF NOTIFY-ON SCORE)>
+
+"Library Hooks"
+
+<BIND ((REDEFINE T))
+    <DEFMAC HOOK-END-OF-COMMAND ()
+       '<BIND ()
+            <NOTIFY-IF-SCORE-UPDATED> ;"Scoring"
+            <FINISH-IF-CODE-SET>      ;"Finishing"
+        >
+    >
+>
 
 
-"The Game"
+"THE GAME"
+
+"ZILF games are a form of Interactive Fiction. They can be thought of as telling
+a story in which the player can take part. Expressed in the language of
+storytelling, each game has a cast, a setting, and a plot."
+
+"Also, each game starts with setting the scene and an introduction."
+
+"Setting the Scene"
 
 <ROUTINE SET-THE-SCENE ()
     <SETG HERE DARKNESS>
@@ -36,10 +72,22 @@ changed in accordance with the name of the game."
     <SETG MAX-SCORE 0>
 >
 
+"Introduction"
+
 <ROUTINE INTRODUCE-THE-GAME ()
     <TELL CR CR "This game starts in the dark ..." CR>
+    <CRLF> <V-VERSION>
+    <CRLF> <V-LOOK>
 >
 
+"Cast"
+
 <INSERT-FILE "Characters">
+
+"Setting"
+
 <INSERT-FILE "Locations">
+
+"Plot"
+
 <INSERT-FILE "Scenes">

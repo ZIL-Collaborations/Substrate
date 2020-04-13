@@ -1,10 +1,13 @@
-"Game - Actions"
+"G A M E  -  Actions File"
 
-"This file will contain the verb routines and associated syntax definitions
-necessary to represent actions."
+"THE INTERACTION"
 
-"It is not necessary to define any actions but there may, in principle, be as
-many as are required to support the game."
+"This consists of a collection of actions. It is not always necessary to define
+actions but there may, in principle, be as many as are required to support the
+game."
+
+"Actions are constructed in ZIL from verb routines and their associated syntax
+definitions."
 
 "Note: as at ZILF 0.9, there is no mechanism to replace syntax definitions in
-the ZILF library other than by editing a copy of verbs.zil."
+the ZILF library other than by editing a copy of verbs.zil. See ZILF Issue #42"
