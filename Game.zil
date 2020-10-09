@@ -32,17 +32,17 @@ library extensions."
 <INSERT-FILE "../Extensions/Scoring">
 <INSERT-FILE "../Extensions/Finishing">
 
-"Game Specific Interaction"
+"Game Specific Interaction and Behaviour"
 
 <INSERT-FILE "Actions">
-
-"Game Specific Behaviour"
-
 <INSERT-FILE "Activities">
 
 "Extra Game Verbs"
 
-<SETG EXTRA-GAME-VERBS '(NOTIFY-OFF NOTIFY-ON SCORE)>
+<SETG EXTRA-GAME-VERBS
+   '(NOTIFY-OFF NOTIFY-ON SCORE ;"from Scoring"
+    )
+>
 
 "Library Hooks"
 
@@ -80,14 +80,8 @@ storytelling, each game has a cast, a setting, and a plot."
     <CRLF> <V-LOOK>
 >
 
-"Cast"
+"Cast, Setting and Plot"
 
 <INSERT-FILE "Characters">
-
-"Setting"
-
 <INSERT-FILE "Locations">
-
-"Plot"
-
 <INSERT-FILE "Scenes">
