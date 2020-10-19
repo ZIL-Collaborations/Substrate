@@ -37,13 +37,6 @@ library extensions."
 <INSERT-FILE "Actions">
 <INSERT-FILE "Activities">
 
-"Extra Game Verbs"
-
-<SETG EXTRA-GAME-VERBS
-   '(NOTIFY-OFF NOTIFY-ON SCORE ;"from Scoring"
-    )
->
-
 "Library Hooks"
 
 <BIND ((REDEFINE T))
